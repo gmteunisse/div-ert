@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Modify CSS and HTML",
+    "version": "0.1.0",
+    "description": "Alter divs on websites",
+    "content_scripts": [{
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://www.kayak.nl/*"]
+    }]
+   
+  }
