@@ -3,10 +3,18 @@
     "name": "Modify CSS and HTML",
     "version": "0.1.0",
     "description": "Alter divs on websites",
+    "_background": {
+      "scripts": ["background.js"]
+    },
     "content_scripts": [{
       "css": ["styles.css"],
       "js": ["content.js"],
-      "matches": ["https://www.kayak.nl/*"]
-    }]
+      "matches": ["*://*/*"],
+      "run_at": "document_end"
+    }],
+    "web_accessible_resources": [{
+      "resources": ["input.txt"],
+      "matches": ["*://*/*"]
+  }]
    
   }
